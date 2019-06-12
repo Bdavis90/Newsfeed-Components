@@ -26,3 +26,4 @@ let articles = document.querySelectorAll('.article');
 articles.forEach((domElement) => {
   return new Article(domElement);
 });
+
