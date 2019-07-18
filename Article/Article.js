@@ -83,7 +83,8 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
-
+  }
+]
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
@@ -96,7 +97,7 @@ const data = [
     <span class='expandButton'></span>
   </div>
 
-<<<<<<< HEAD
+
   Hint: You will need to use createElement more than once here!
 
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each peice of the data object above.
@@ -108,9 +109,8 @@ const data = [
   Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
 
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
+*/
 
-
-<<<<<<< HEAD
 function createComponent(data){
   let article = document.createElement('div');
   article.classList.add('article');
@@ -142,7 +142,6 @@ console.log(article)
   let span = document.createElement('span');
   span.classList.add('expandButton');
   article.appendChild(span);
-  span.textContent = 'Click'
   span.addEventListener('click', () => {
     article.classList.toggle('article-open')
   })
@@ -150,10 +149,16 @@ console.log(article)
   return article;
 }
 
-let newComponent = data.map((data) => {
-  return createComponent(data)
-  
-})
+const allArticles = document.querySelector(".articles");
 
-const allArticles = document.querySelector('.articles');
-allArticles.appendChild(createComponent())
+const newComponent = data.map(data => {
+  allArticles.appendChild(createComponent(data));
+});
+
+// let newComponent = data.map((data) => {
+//   return createComponent(data)
+  
+// })
+
+// const allArticles = document.querySelector('.articles');
+// allArticles.appendChild(createComponent())
