@@ -1,6 +1,3 @@
-/* This is the data we will be using, study it but don't change anything, yet. */
-
-<<<<<<< HEAD
 let menuItems = [
   'Students',
   'Faculty',
@@ -60,18 +57,4 @@ let menuItems = [
 
 // const header = document.querySelector('.header');
 // header.appendChild(menuComponent())
-=======
-const toggleMenu = () => {
-  // Toggle the "menu--open" class on your menu refence. 
- menu.classList.toggle('menu--open')
-}
 
-// Start Here: Create a reference to the ".menu" class
-const menu = document.querySelector('.menu');
-// create a reference to the ".menu-button" class
-const menuButton = document.querySelector('.menu-button');
-// Using your menuButton reference, add a click handler that calls toggleMenu
-menuButton.addEventListener('click', () => {
-  toggleMenu()
-})
->>>>>>> aaeb9faefd8a06fae9a888b31aeaaa6f191476c1
