@@ -32,29 +32,29 @@ let menuItems = [
   
 */
 
-// function menuComponent(menuItems){
-//   const menu = document.createElement('div');
-//   newDiv.classList.add('menu');
+function menuComponent(menuItems){
+  const menu = document.createElement('div');
+  menu.classList.add('menu');
 
-//   const newUl = document.createElement('ul');
-//   newDiv.appendChild(newUl);
+  const newUl = document.createElement('ul');
+  menu.appendChild(newUl);
 
-//   const menuButton = document.querySelector('.menu-button');
-//   newDiv.appendChild(menuButton);
+  const menuButton = document.querySelector('.menu-button');
+  menu.appendChild(menuButton);
 
-//   menuItems.forEach(items => {
-//     const newLi = document.createElement('li');
-//     newLi.textContent = items;
-//     newUl.appendChild(newLi);
-//   })
+  menuItems.forEach(items => {
+    const newLi = document.createElement('li');
+    newLi.textContent = items;
+    newUl.appendChild(newLi);
+  })
   
-//   menuButton.addEventListener('click', () => {
-//     menuButton.classList.toggle('menu--open')
-//   })
+  menuButton.addEventListener('click', () => {
+    menuButton.classList.toggle('menu--open')
+  })
 
-//   return menu;
-// }
+  return menu;
+}
 
-// const header = document.querySelector('.header');
-// header.appendChild(menuComponent())
-
+const header = document.querySelector('.header');
+// console.log(header)
+header.appendChild(menuComponent())

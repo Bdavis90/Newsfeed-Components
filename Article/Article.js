@@ -114,7 +114,7 @@ const data = [
 function createComponent(data){
   let article = document.createElement('div');
   article.classList.add('article');
-console.log(article)
+
   let h2 = document.createElement('h2');
   h2.textContent = data.title;
   article.appendChild(h2);
@@ -141,6 +141,7 @@ console.log(article)
 
   let span = document.createElement('span');
   span.classList.add('expandButton');
+  span.textContent = 'Click'
   article.appendChild(span);
   span.addEventListener('click', () => {
     article.classList.toggle('article-open')
@@ -152,13 +153,6 @@ console.log(article)
 const allArticles = document.querySelector(".articles");
 
 const newComponent = data.map(data => {
+  console.log(allArticles)
   allArticles.appendChild(createComponent(data));
 });
-
-// let newComponent = data.map((data) => {
-//   return createComponent(data)
-  
-// })
-
-// const allArticles = document.querySelector('.articles');
-// allArticles.appendChild(createComponent())
